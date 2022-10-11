@@ -1,5 +1,5 @@
 //jshint esversion:6
-module.exports = new getDay;
+
 function getDay(){
     var today = new Date();
     
@@ -12,3 +12,4 @@ function getDay(){
     var day = today.toLocaleDateString("en-US", options);
     return day;
 };
+module.exports =  getDay;
