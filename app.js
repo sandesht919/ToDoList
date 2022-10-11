@@ -3,7 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const date = require(__dirname + "/date.js");
-console.log(date);
+console.log(date)
 const app = express();
 app.set("view engine", "ejs"); 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -12,11 +12,8 @@ var items = [];
 var workItems =[];
 
 app.get("/", function(req, res){
-
-    let day = date;
+        let day = date;
        res.render("list", {headerName: day, newItems: items});
-        
-    
 });
 
 app.post("/", function(req, res){
